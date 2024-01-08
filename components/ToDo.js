@@ -68,7 +68,7 @@ const ToDo = () => {
                         <label for="default-radio-2" className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Deployment</label>
                     </div> */}
                 </div>
-                <button onClick={addTodo} className="text-white mt-4 bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-800 rounded text-lg">Button</button>
+                <button onClick={addTodo} className="text-white mt-4 bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-800 rounded text-lg">Add</button>
             </section >
         </div >
     )
