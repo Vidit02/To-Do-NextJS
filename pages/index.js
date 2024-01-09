@@ -1,11 +1,14 @@
 'use client'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import { useState ,Feagment, Fragment} from 'react'
+import { useState, Feagment, Fragment } from 'react'
 import ToDo from '@/components/ToDo'
+import { Provider } from 'react-redux'
+import store from './store/store'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+
 
   // const [todo, setTodo] = useState({ name: "", category: "" })
   return (
@@ -38,8 +41,10 @@ export default function Home() {
     //     <button className="text-white mt-4 bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-800 rounded text-lg">Button</button>
     //   </section>
     // </div>
-    <Fragment>
-      <ToDo/>
-    </Fragment>
+    <Provider store={store}>
+      <Fragment>
+        <ToDo />
+      </Fragment>
+    </Provider>
   )
 }
